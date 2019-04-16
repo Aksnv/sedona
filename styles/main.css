@@ -1,3 +1,242 @@
+/* ------------- Fonts ------------- */
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans"),
+       url(../fonts/web/ptsans.woff2) format("woff2"),
+       url(../fonts/web/ptsans.woff) format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSansBold"),
+       url(../fonts/web/ptsansbold.woff2) format("woff2"),
+       url(../fonts/web/ptsansbold.woff) format("woff");
+}
+
+
+/* ------------- Сommon styles ------------- */
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  /*display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 1200px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;*/
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  /*font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+
+  background-color: #ffffff;*/
+}
+
+/*.container {
+  position: relative;
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 20px;
+
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 3px;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  -webkit-box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.button:disabled,
+.button_disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button_disabled {
+  pointer-events: none;
+}
+
+.button_disabled:focus {
+  outline: none;
+}
+
+.button_wide {
+  width: 100%;
+}
+
+.button_grey {
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.button_grey:hover,
+.button_grey:focus {
+  background-color: #dfdfdf;
+}
+
+.button_grey:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #d5d5d5;
+}
+
+.button_grey:disabled:hover,
+.button_grey.button_disabled:hover,
+.button_grey.button_disabled:focus {
+  background-color: #eeeeee;
+}
+
+.button_red {
+  background-color: #fb565a;
+}
+
+.button_red:hover,
+.button_red:focus {
+  background-color: #e74246;
+}
+
+.button_red:active {
+  background-color: #d7373b;
+}
+
+.button_red:disabled:hover,
+.button_red.button_disabled:hover,
+.button_red.button_disabled:focus {
+  background-color: #fb565a;
+}
+
+.button_green {
+  background-color: #00ca74;
+}
+
+.button_green:hover,
+.button_green:focus {
+  background-color: #00bc6c;
+}
+
+.button_green:active {
+  background-color: #00aa62;
+}
+
+.button_green:disabled:hover,
+.button_green.button_disabled:hover,
+.button_green.button_disabled:focus {
+  background-color: #00ca74;
+}
+
+.button_yellow {
+  background-color: #efc84a;
+}
+
+.button_yellow:hover,
+.button_yellow:focus {
+  background-color: #eab534;
+}
+
+.button_yellow:active {
+  background-color: #e5a722;
+}
+
+.button_yellow:disabled:hover,
+.button_yellow.button_disabled:hover,
+.button_yellow.button_disabled:focus {
+  background-color: #efc84a;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}*/
+
+
+/* ------------- Header ------------- */
+
+
+/* ------------- Footer ------------- */
+
 .copyrights g {
   fill: grey;
 }
