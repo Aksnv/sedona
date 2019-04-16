@@ -253,6 +253,78 @@ input[type="radio"].visually-hidden {
 }
 
 
+/* ------------- Filters ------------- */
+
+.filters-form {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.filters-form__fieldset:last-child {
+  margin-left: auto;
+}
+
+
+/* ------------- Search results ------------- */
+
+.sorter {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.sorter__categories,
+.sorter__controls {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.sorter__controls {
+  margin-left: auto;
+}
+
+.hotels-list,
+.hotels-item__rating-stars {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.hotels-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+
+.hotels-item__rating {
+  margin-left: auto;
+}
+
+.hotels-item__rating-stars {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+
 /* ------------- Footer ------------- */
 
 .main-footer {
