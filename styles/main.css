@@ -581,7 +581,7 @@ legend.visually-hidden {
 
 .search-form__field {
   width: 346px;
-  padding: 6px 15px;
+  padding: 4px 10px;
 
   font-size: 14px;
   font-weight: 700;
@@ -590,7 +590,33 @@ legend.visually-hidden {
   color: #000000;
 
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
+}
+
+.search-form__field:hover {
+  background-color: #ebebeb;
+  border: 2px solid #ebebeb;
+}
+
+.search-form__field:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.search-form__field::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.search-form__field:-ms-input-placeholder {
+  color: #000000;
+}
+
+.search-form__field::-ms-input-placeholder {
+  color: #000000;
+}
+
+.search-form__field::placeholder {
+  color: #000000;
 }
 
 .search-form__field_arrival,
@@ -608,40 +634,99 @@ legend.visually-hidden {
   justify-content: center;
   align-items: center;
   width: 38px;
-  padding: 6px 0;
+  padding: 4px 0;
 
   text-align: center;
 }
 
 .search-form__button_calendar {
   position: absolute;
-  top: 6px;
-  right: 2px;
+  top: 7px;
+  right: 9px;
+
+  display: block;
+  width: 21px;
+  height: 22px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
 }
 
+.search-form__button_calendar path {
+  fill: #cacaca;
+}
+
+.search-form__button_calendar:hover path,
+.search-form__button_calendar:focus path {
+  fill: #000000;
+}
+
+.search-form__button_calendar:active path {
+  fill: #81b3d2;
+}
+
 .search-form__button_increase,
 .search-form__button_decrease {
+  position: relative;
+
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
   display: -o-inline-flex;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 38px;
-  padding: 6px 0;
-
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #a9a9a9;
+  height: 38px;
+  padding: 0;
 
   background-color: #f2f2f2;
   border: none;
+}
+
+.search-form__button_decrease::before,
+.search-form__button_increase::before,
+.search-form__button_increase::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+
+  background-color: #a9a9a9;
+
+  transform: translate(-50%, -50%);
+}
+
+.search-form__button_decrease::before {
+  width: 12px;
+  height: 3px;
+}
+
+.search-form__button_increase::before,
+.search-form__button_increase::after {
+  width: 11px;
+  height: 3px;
+}
+
+.search-form__button_increase::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.search-form__button_decrease:hover::before,
+.search-form__button_increase:hover::before,
+.search-form__button_increase:hover::after,
+.search-form__button_decrease:focus::before,
+.search-form__button_increase:focus::before,
+.search-form__button_increase:focus::after {
+  background-color: #000000;
+}
+
+.search-form__button_decrease:active::before,
+.search-form__button_increase:active::before,
+.search-form__button_increase:active::after {
+  background-color: #81b3d2;
 }
 
 .search-form__button_submit {
@@ -725,18 +810,25 @@ legend.visually-hidden {
   cursor: pointer;
 }
 
-.filters-form__indicator {
+.filters-form__indicator_checkbox {
   content: "";
 
   position: absolute;
-
-  display: block;
-}
-
-.filters-form__indicator_checkbox {
   top: -4px;
   left: 0px;
+}
 
+.filters-form__indicator_checkbox_on {
+  width: 27px;
+  height: 23px;
+
+  background-image: url(../images/icons/forms/checkbox-on.svg);
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0;
+}
+
+.filters-form__indicator_checkbox_off {
   width: 23px;
   height: 23px;
 
@@ -744,14 +836,38 @@ legend.visually-hidden {
   border-radius: 2px;
 }
 
-.filters-form__field_checkbox:checked + .filters-form__indicator_checkbox {
-  background-image: url(../images/icons/forms/checkbox-on.svg);
-  border: none;
+.filters-form__field + .filters-form__label .filters-form__indicator_checkbox_on {
+  display: none;
 }
 
-.filters-form__field_checkbox:focus + .filters-form__indicator_checkbox {
+.filters-form__field:checked + .filters-form__label .filters-form__indicator_checkbox_on {
+  display: block;
+}
+
+.filters-form__field + .filters-form__label .filters-form__indicator_checkbox_off {
+  display: block;
+}
+
+.filters-form__field:checked + .filters-form__label .filters-form__indicator_checkbox_off {
+  display: none;
+}
+
+.filters-form__field:focus + .filters-form__label .filters-form__indicator {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filters-form__field:disabled + .filters-form__label,
+.filters-form__field:disabled + .filters-form__label .filters-form__indicator {
+  cursor: default;
+}
+
+.filters-form__field:disabled + .filters-form__label .filters-form__indicator_checkbox_off {
+  border-color: #666666;
+}
+
+.filters-form__field:disabled + .filters-form__label .filters-form__indicator_checkbox_on g {
+  fill: #666666;
 }
 
 .filters-form__price {
@@ -906,6 +1022,13 @@ legend.visually-hidden {
   border-radius: 2px;
 }
 
+.filters-form__button_submit:hover,
+.filters-form__button_submit:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
 
 /* ------------- Search results ------------- */
 
@@ -973,6 +1096,17 @@ legend.visually-hidden {
   border-bottom: 1px dotted #81b3d2;
 }
 
+.sorter__categories-button:hover,
+.sorter__categories-button:focus {
+  color: #81b3d2;
+}
+
+.sorter__categories-button:active {
+  color: #000000;
+
+  border-bottom: none;
+}
+
 .sorter__categories-button_current {
   color: #81b3d2;
 
@@ -1020,7 +1154,7 @@ legend.visually-hidden {
 
 .sorter__controls-button:hover,
 .sorter__controls-button:focus {
-
+  border-top-color: rgba(0, 0, 0, 1);
 }
 
 .sorter__controls-button_current,
@@ -1083,11 +1217,22 @@ legend.visually-hidden {
 .hotels-item__name {
   width: 100%;
   margin-bottom: 7px;
+}
 
+.hotels-item__link {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
+}
+
+.hotels-item__link:hover,
+.hotels-item__link:focus {
+  color: #81b3d2;
+}
+
+.hotels-item__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotels-item__type,
@@ -1218,6 +1363,10 @@ legend.visually-hidden {
   height: 48px;
 }
 
+.socials__link:active path {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
 .copyrights {
   display: -webkit-flex;
   display: -moz-flex;
@@ -1238,6 +1387,15 @@ legend.visually-hidden {
   height: 39px;
 }
 
-.copyrights__link g {
-  fill: grey;
+.copyrights__link path {
+  fill: #231f20;
+}
+
+.copyrights__link:hover path,
+.copyrights__link:focus path {
+  fill: #81b3d2;
+}
+
+.copyrights__link:active path {
+  fill: #bdbbbc;
 }
