@@ -909,8 +909,6 @@ legend.visually-hidden {
 /* ------------- Search results ------------- */
 
 .search-results {
-  padding: 0 6%;
-
   color: #333333;
 
   background-color: #ffffff;
@@ -922,13 +920,29 @@ legend.visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  align-items: baseline;
+  padding: 30px 6%;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .sorter__quantity {
+  width: 135px;
+  margin-right: 30px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  color: #000000;
+}
+
+.sorter__legend {
+  margin: 0;
+  margin-right: 40px;
 }
 
 .sorter__categories,
@@ -944,8 +958,75 @@ legend.visually-hidden {
   list-style-type: none;
 }
 
+.sorter__categories-item {
+  margin-right: 32px;
+}
+
+.sorter__categories-item:last-child {
+  margin-right: 0;
+}
+
+.sorter__categories-button {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorter__categories-button_current {
+  color: #81b3d2;
+
+  border-bottom: none;
+}
+
 .sorter__controls {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 35px;
   margin-left: auto;
+}
+
+.sorter__controls-item {
+  margin-right: 15px;
+}
+
+.sorter__controls-item:last-child {
+  margin-right: 0;
+}
+
+.sorter__controls-button {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.3);
+  border-bottom-width: 0;
+}
+
+.sorter__controls-button_up {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sorter__controls-button:hover,
+.sorter__controls-button:focus {
+
+}
+
+.sorter__controls-button_current,
+.sorter__controls-button_current:hover,
+.sorter__controls-button_current:focus,
+.sorter__controls-button:active {
+  border-top-color: #81b3d2;
 }
 
 .hotels-list,
@@ -956,6 +1037,10 @@ legend.visually-hidden {
   list-style-type: none;
 }
 
+.hotels-list {
+  padding: 0 6%;
+}
+
 .hotels-item {
   display: -webkit-flex;
   display: -moz-flex;
@@ -963,6 +1048,10 @@ legend.visually-hidden {
   display: -o-flex;
   display: flex;
   align-items: center;
+}
+
+.hotels-item__image {
+  margin-right: 30px;
 }
 
 .hotels-item__rating {
