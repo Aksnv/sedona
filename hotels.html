@@ -46,42 +46,58 @@
         <form class="filters-form" name="filters-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filters-form__fieldset">
             <legend class="filters-form__legend">Инфраструктура:</legend>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="pool" checked>
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Бассейн
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="parking">
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Парковка
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="wifi">
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Wi-Fi
-            </label>
+            <ul class="filters-form__list">
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="pool" checked>
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Бассейн
+                </label>
+              </li>
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="parking">
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Парковка
+                </label>
+              </li>
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="wifi">
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filters-form__fieldset">
             <legend class="filters-form__legend">Тип жилья:</legend>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="hotel" checked>
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Гостиница
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="motel" checked>
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Мотель
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__field filters-form__field_checkbox" type="checkbox" name="apartments" checked>
-              <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
-              Апартаменты
-            </label>
+            <ul class="filters-form__list">
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="hotel" checked>
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Гостиница
+                </label>
+              </li>
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="motel" checked>
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Мотель
+                </label>
+              </li>
+              <li class="filters-form__item">
+                <label class="filters-form__label">
+                  <input class="filters-form__field filters-form__field_checkbox visually-hidden" type="checkbox" name="apartments" checked>
+                  <span class="filters-form__indicator filters-form__indicator_checkbox"></span>
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filters-form__fieldset">
-            <legend class="filters-form__legend">Стоимость в&nbsp;сутки (Р):</legend>
+            <legend class="filters-form__legend filters-form__legend_price">Стоимость в&nbsp;сутки (Р):</legend>
             <p class="filters-form__price">
               <span class="filters-form__price-value filters-form__price-value_min">
                 от <input class="filters-form__field filters-form__field_price filters-form__field_price_min" type="text" name="min-price" value="0">
@@ -90,7 +106,7 @@
                 до <input class="filters-form__field filters-form__field_price filters-form__field_price_max" type="text" name="max-price" value="3000">
               </span>
             </p>
-            <input class="filters-form__field filters-form__field_range" type="range" name="price-range" min="0" max="5000" step="1000" value="3000">
+            <input class="filters-form__field filters-form__field_range" type="range" name="price-range" min="0" max="5000" step="1000" value="4000">
             <button class="filters-form__button filters-form__button_submit" type="submit">Показать</button>
           </fieldset>
         </form>
@@ -204,13 +220,22 @@
       <p class="hashtag page-footer__hashtag">#Visitsedona</p>
       <ul class="socials page-footer__socials">
         <li class="socials__item">
-          <a class="button button_blue socials__link" href="#">Twitter</a>
+          <a class="button button_blue socials__link" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
+          </a>
         </li>
         <li class="socials__item">
-          <a class="button button_blue socials__link" href="#">Facebook</a>
+          <a class="button button_blue socials__link" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
+          </a>
         </li>
         <li class="socials__item">
-          <a class="button button_blue socials__link" href="#">Youtube</a>
+          <a class="button button_blue socials__link" href="#">
+            <span class="visually-hidden">Youtube</span>
+            <svg height="16" viewBox="0 0 20 16" width="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="m17 0h-14c-1.65 0-3 1.35-3 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-10c0-1.65-1.35-3-3-3zm-10.973 11.998v-7.996l8.987 3.998z" fill="#fff"/></svg>
+          </a>
         </li>
       </ul>
       <p class="copyrights page-footer__copyrights">
