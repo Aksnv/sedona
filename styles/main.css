@@ -173,6 +173,7 @@ legend.visually-hidden {
 
 .page-header {
   padding: 15px 0;
+  padding-top: 14px;
 
   color: #000000;
 
@@ -280,7 +281,53 @@ legend.visually-hidden {
 /* ------------- Intro ------------- */
 
 .intro {
+  position: relative;
 
+  height: 512px;
+
+  overflow: hidden;
+}
+
+.intro::before {
+  content: "";
+
+  position: absolute;
+  top: 76px;
+  left: 50%;
+
+  display: block;
+  width: 458px;
+  height: 352px;
+
+  background-image: url(../images/intro-text.png);
+  background-repeat: no-repeat;
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+}
+
+.intro::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 57px;
+
+  background-image: url(../images/intro-mask.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: left bottom;
+}
+
+.intro__image {
+  /*position: absolute;
+  top: -83px;*/
 }
 
 /*.intro__text {
