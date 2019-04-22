@@ -757,6 +757,16 @@ legend.visually-hidden {
   transform: translateY(-50%);
 }
 
+.search-form__button_calendar:hover + .search-form__field,
+.search-form__button_calendar:focus + .search-form__field {
+  background-color: #ebebeb;
+  border: 2px solid #ebebeb;
+}
+
+.search-form__button_calendar:disabled {
+  cursor: default;
+}
+
 .search-form__button_calendar path {
   fill: #cacaca;
 }
@@ -768,6 +778,15 @@ legend.visually-hidden {
 
 .search-form__button_calendar:active path {
   fill: #81b3d2;
+}
+
+.search-form__button_calendar:disabled path {
+  opacity: 0.5;
+}
+
+.search-form__button_calendar:disabled:hover path,
+.search-form__button_calendar:disabled:focus path {
+  fill: #cacaca;
 }
 
 .search-form__button_increase,
@@ -785,6 +804,13 @@ legend.visually-hidden {
 
   background-color: #f2f2f2;
   border: none;
+}
+
+.search-form__button_increase:disabled,
+.search-form__button_decrease:disabled {
+  opacity: 0.3;
+
+  cursor: default;
 }
 
 .search-form__button_decrease::before,
@@ -825,6 +851,15 @@ legend.visually-hidden {
 .search-form__button_increase:focus::before,
 .search-form__button_increase:focus::after {
   background-color: #000000;
+}
+
+.search-form__button_decrease:disabled:hover::before,
+.search-form__button_increase:disabled:hover::before,
+.search-form__button_increase:disabled:hover::after,
+.search-form__button_decrease:disabled:focus::before,
+.search-form__button_increase:disabled:focus::before,
+.search-form__button_increase:disabled:focus::after {
+  background-color: #a9a9a9;
 }
 
 .search-form__button_decrease:active::before,
