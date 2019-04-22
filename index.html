@@ -23,7 +23,7 @@
         <img class="logo__image" src="images/logo/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
       </a>
       <nav class="main-menu page-header__menu">
-        <ul class="main-menu__items">
+        <ul class="main-menu__list">
           <li class="main-menu__item">
             <a class="main-menu__link" href="#">Информация</a>
           </li>
@@ -96,10 +96,12 @@
         </ul>
       </section>
       <section class="search">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <b class="search__header">Заинтересовались?</b>
-        <p class="search__text">Укажите предполагаемые даты поездки,<br> и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-        <a class="button button_brown button_big search__button" href="#">Поиск гостиницы в&nbsp;Седоне</a>
+        <div class="search__wrapper">
+          <h2 class="visually-hidden">Поиск гостиницы</h2>
+          <b class="search__header">Заинтересовались?</b>
+          <p class="search__text">Укажите предполагаемые даты поездки,<br> и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
+          <a class="button button_brown button_big search__button" href="search.html">Поиск гостиницы в&nbsp;Седоне</a>
+        </div>
         <form class="search-form search__form" name="search-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="search-form__fieldset">
             <legend class="search-form__legend visually-hidden">Параметры заезда</legend>
@@ -170,5 +172,6 @@
       </p>
     </footer>
   </div>
+  <script src="scripts/search.js"></script>
 </body>
 </html>
