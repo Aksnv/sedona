@@ -18,6 +18,4 @@ searchFormButton.addEventListener("click", function(e) {
     searchForm.classList.add("search__form_visible");
     searchForm.classList.remove("search__form_invisible");
   }
-  /*searchForm.classList.toggle("search__form_visible");*/
-  /*searchForm.offsetWidth;*/
 });
