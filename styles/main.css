@@ -1430,7 +1430,6 @@ legend.visually-hidden {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 36px 0;
@@ -1450,8 +1449,13 @@ legend.visually-hidden {
   border-top: none;
 }
 
-.hashtag {
+.page-footer__hashtag,
+.page-footer__socials,
+.page-footer__copyrights {
   width: 33.3333%;
+}
+
+.hashtag {
   margin: 0;
 
   font-size: 21px;
@@ -1472,7 +1476,6 @@ legend.visually-hidden {
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
-  width: 33.3333%;
   margin: 0;
   padding: 0;
 
@@ -1480,19 +1483,19 @@ legend.visually-hidden {
 }
 
 .socials__item {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .socials__item:last-child {
   margin-right: 0;
 }
 
-.socials__link {
+.socials__button {
   width: 46px;
   height: 48px;
 }
 
-.socials__link:active path {
+.socials__button:active path {
   fill: rgba(255, 255, 255, 0.3);
 }
 
@@ -1504,7 +1507,6 @@ legend.visually-hidden {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.3333%;
   margin: 0;
 }
 
@@ -1513,6 +1515,12 @@ legend.visually-hidden {
 }
 
 .copyrights__link {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  width: 113px;
   height: 39px;
 }
 
